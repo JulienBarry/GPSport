@@ -1,0 +1,14 @@
+Befehle:
+
+Ich speichere eine �nderung
+
+git status
+git add . (alles) oder ge�ndertedatei.js
+git commit -m "�nderung"
+git push
+
+
+Ich �bernehme �nderungen oder �berpr�fe ob �nderungen vorgenommen wurden
+
+git fetch
+git pull
