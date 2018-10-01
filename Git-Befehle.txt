@@ -12,3 +12,8 @@ Ich �bernehme �nderungen oder �berpr�fe ob �nderungen vorgenommen wurd
 
 git fetch
 git pull
+
+downloads und Websites für zu Hause:
+https://git-scm.com/download/win
+https://cordova.apache.org/#getstarted
+https://nodejs.org/en/download/
