@@ -44,3 +44,32 @@ var app = {
 };
 
 app.initialize();
+
+var app = {};
+
+ons.ready(function () {
+  ons.createElement('action-sheet.html', { append: true })
+    .then(function (sheet) {
+      app.showFromTemplate = sheet.show.bind(sheet);
+      app.hideFromTemplate = sheet.hide.bind(sheet);
+    });
+});
+
+app.showFromObject = function () {
+  ons.openActionSheet({
+    title: 'From object',
+    cancelable: true,
+    buttons: [
+      'Label 0',
+      'Label 1',
+      {
+        label: 'Label 2',
+        modifier: 'destructive'
+      },
+      {
+        label: 'Cancel',
+        icon: 'md-close'
+      }
+    ]
+  }).then(function (index) { console.log('index: ', index) });
+};
