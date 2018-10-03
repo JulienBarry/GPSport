@@ -51,46 +51,37 @@
         <title>Hello World</title>
     </head>
     <body>
-      <ons-page>
-<ons-toolbar>
-  <div class="center">
-    <ons-segment id="segment" tabbar-id="tabbar" style="width: 180px">
-      <button>Page 1</button>
-      <button>Page 2</button>
-      <button>Page 3</button>
-    </ons-segment>
-  </div>
-</ons-toolbar>
 
-<ons-tabbar id="tabbar">
-  <ons-tab page="page1.html" active></ons-tab>
-  <ons-tab page="page2.html"></ons-tab>
-  <ons-tab page="page3.html"></ons-tab>
-</ons-tabbar>
-</ons-page>
+    <ons-page>
 
-<template id="page1.html">
-<ons-page>
-  <h2>Page1</h2>
-  <ons-button onclick="changeTab()">Change tab via tabbar</ons-button><br><br>
-  <ons-button onclick="changeButton()">Change tab via segment</ons-button><br><br>
-  <ons-button onclick="logIndexes()">Log current button index</ons-button><br><br>
-</ons-page>
-</template>
+      <ons-toolbar style="height: 70">
+        <img src="/img/Logo.jpg" height="60" width="60">
+        <div class="center" style="font-style:italic;">GPSport</div>
+      </ons-toolbar>
 
-<template id="page2.html">
-<ons-page>
-  <h2>Page2</h2>
-  <ons-button onclick="logIndexes()">Log current button index</ons-button>
-</ons-page>
-</template>
+    <ons-tabbar swipeable position="auto">
+      <ons-tab page="tab1.html" label="Timer" icon="md-timer" active>
+      </ons-tab>
+      <ons-tab page="tab2.html" label="Routes" icon="md-walk">
+      </ons-tab>
+    </ons-tabbar>
+  </ons-page>
 
-<template id="page3.html">
-<ons-page>
-  <h2>Page3</h2>
-  <ons-button onclick="logIndexes()">Log current button index</ons-button>
-</ons-page>
-</template>
+  <template id="tab1.html">
+    <ons-page id="Tab1">
+      <p style="text-align: center;">
+        This is the first page.
+      </p>
+    </ons-page>
+  </template>
+
+  <template id="tab2.html">
+    <ons-page id="Tab2">
+      <p style="text-align: center;">
+        This is the second page.
+      </p>
+    </ons-page>
+  </template>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
