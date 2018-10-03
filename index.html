@@ -50,27 +50,11 @@
     </head>
     <body>
         <div class="app">
-          <ons-page>
-<ons-toolbar>
-  <div class="center">Action Sheet</div>
-</ons-toolbar>
-
-<p style="text-align: center">
-  <ons-button onclick="app.showFromTemplate()">Create from template</ons-button>
-  <br><br>
-  <ons-button onclick="app.showFromObject()">Create from object</ons-button>
-</p>
-
-</ons-page>
-
-<template id="action-sheet.html">
-<ons-action-sheet id="sheet" cancelable title="From template">
-  <ons-action-sheet-button icon="md-square-o" onclick="app.hideFromTemplate()">Label</ons-action-sheet-button>
-  <ons-action-sheet-button icon="md-square-o" onclick="app.hideFromTemplate()">Label</ons-action-sheet-button>
-  <ons-action-sheet-button icon="md-square-o" onclick="app.hideFromTemplate()" modifier="destructive">Label</ons-action-sheet-button>
-  <ons-action-sheet-button icon="md-close" onclick="app.hideFromTemplate()">Cancel</ons-action-sheet-button>
-</ons-action-sheet>
-</template>
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
