@@ -118,3 +118,17 @@ div canvas {
   height: 100%;
   width: 100%;
 }
+
+
+body{
+
+  padding 90px;
+}
+
+.lolms {
+  color: green;
+  text-align: center;
+  width: 50%;
+  position: center;
+  left: 150px;
+}
