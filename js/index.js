@@ -45,31 +45,16 @@ var app = {
 
 app.initialize();
 
-var app = {};
-
-ons.ready(function () {
-  ons.createElement('action-sheet.html', { append: true })
-    .then(function (sheet) {
-      app.showFromTemplate = sheet.show.bind(sheet);
-      app.hideFromTemplate = sheet.hide.bind(sheet);
-    });
+document.addEventListener('postchange', function (event) {
+  console.log('postchange event', event);
 });
-
-app.showFromObject = function () {
-  ons.openActionSheet({
-    title: 'From object',
-    cancelable: true,
-    buttons: [
-      'Label 0',
-      'Label 1',
-      {
-        label: 'Label 2',
-        modifier: 'destructive'
-      },
-      {
-        label: 'Cancel',
-        icon: 'md-close'
-      }
-    ]
-  }).then(function (index) { console.log('index: ', index) });
-};
+function changeTab() {
+  document.getElementById('tabbar').setActiveTab(1);
+}
+function changeButton() {
+  document.getElementById('segment').setActiveButton(1);
+}
+function logIndexes() {
+  console.log('active button index', document.getElementById('segment').getActiveButtonIndex());
+  console.log('active tab index', document.getElementById('tabbar').getActiveTabIndex());
+}
