@@ -30,9 +30,11 @@
         -->
         <meta http-equiv="Content-Security-Policy" content="
           default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
-          style-src 'self' 'unsafe-inline';
-          media-src *;
-          img-src 'self' data: content:;
+          style-src * 'unsafe-inline';
+          script-src * 'unsafe-inline';
+          font-src * 'unsafe-inline';
+          media-src * blob:;
+          img-src * data:;
           ">
 
         <meta name="format-detection" content="telephone=no">
@@ -49,8 +51,7 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-          <ons-page>
+      <ons-page>
 <ons-toolbar>
   <div class="center">
     <ons-segment id="segment" tabbar-id="tabbar" style="width: 180px">
@@ -90,7 +91,6 @@
   <ons-button onclick="logIndexes()">Log current button index</ons-button>
 </ons-page>
 </template>
-        </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>

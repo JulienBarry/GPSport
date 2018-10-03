@@ -28,33 +28,33 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        document.addEventListener('postchange', function (event) {
+          console.log('postchange event', event);
+        });
+        function changeTab() {
+          document.getElementById('tabbar').setActiveTab(1);
+        }
+        function changeButton() {
+          document.getElementById('segment').setActiveButton(1);
+        }
+        function logIndexes() {
+          console.log('active button index', document.getElementById('segment').getActiveButtonIndex());
+          console.log('active tab index', document.getElementById('tabbar').getActiveTabIndex());
+        }
+
     },
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
+        /*var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        console.log('Received Event: ' + id);*/
     }
 };
 
 app.initialize();
-
-document.addEventListener('postchange', function (event) {
-  console.log('postchange event', event);
-});
-function changeTab() {
-  document.getElementById('tabbar').setActiveTab(1);
-}
-function changeButton() {
-  document.getElementById('segment').setActiveButton(1);
-}
-function logIndexes() {
-  console.log('active button index', document.getElementById('segment').getActiveButtonIndex());
-  console.log('active tab index', document.getElementById('tabbar').getActiveTabIndex());
-}
