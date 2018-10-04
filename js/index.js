@@ -27,6 +27,20 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+
+        window.localStorage.setItem("id","546");
+        var value = window.localStorage.getItem("id");
+        console.log(value);
+
+        window.localStorage.setItem("blackbarry","19");
+        var balue = window.localStorage.getItem("blackbarry");
+        console.log(balue);
+
+        //1. localstrorage clear
+        //2. neues Item mit setItem
+        //3. neues Item anzeigen mit getItem
+        //4. manuell entfernen  mit removeListeners
+
         this.receivedEvent('deviceready');
         document.addEventListener('postchange', function (event) {
           console.log('postchange event', event);
